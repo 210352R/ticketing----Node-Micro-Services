@@ -1,8 +1,8 @@
 import express, { Request, Response } from "express";
 import { body, validationResult } from "express-validator";
 import { User } from "../models/user";
-import { RequestValidationError } from "../errors/request-validation-error";
-import { BadRequestError } from "../errors/bad-request-error";
+import { RequestValidationError } from "@eshan_tickets/common";
+import { BadRequestError } from "@eshan_tickets/common";
 import jwt from "jsonwebtoken";
 const router = express.Router();
 
@@ -19,7 +19,7 @@ router.post(
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      throw new RequestValidationError(errors.array());
+      throw new BadRequestError("Invalid email or password");
     }
 
     const { email, password } = req.body;
