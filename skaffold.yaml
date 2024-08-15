@@ -25,7 +25,15 @@ build:
         manual:
           - src: '**/*.js'
             dest: .
-      
+    
+    - image: eshanmaduranga/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
 
 # Skaffold is a command-line tool that facilitates continuous development on Kubernetes clusters. 
 #It automates the workflow for building, pushing, and deploying your application, allowing for rapid iteration during development. 
