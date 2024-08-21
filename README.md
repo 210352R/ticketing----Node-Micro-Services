@@ -36,6 +36,7 @@ Ensure you have the following installed on your system:
 - Kubernetes (K8s) 
 - NATS Server
 - Jest and SuperTest
+- Next JS
 
 ## Application Architecture
 ![1_b0CH088PsihIRV45JvAq9Q](https://github.com/user-attachments/assets/3359e3e8-bbfe-47e5-bb83-9fb7d23044df)
